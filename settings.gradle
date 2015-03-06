@@ -1,0 +1,9 @@
+
+rootProject.name = 'qcon-london-2015'
+
+include 'qcon-london-2015-ingester'
+include 'qcon-london-2015-javadsl'
+include 'qcon-london-2015-reactor'
+include 'qcon-london-2015-rs'
+include 'qcon-london-2015-spel'
+

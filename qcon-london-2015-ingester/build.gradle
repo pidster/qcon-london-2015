@@ -1,0 +1,14 @@
+repositories {
+    mavenCentral()
+    maven { url 'http://repo.spring.io/libs-release' }
+}
+
+dependencies {
+    compile("org.springframework:spring-messaging:4.1.3.RELEASE") {
+        exclude group: 'org.projectreactor'
+    }
+    compile "org.springframework.integration:spring-integration-java-dsl:1.0.0.RELEASE"
+    compile "org.springframework.boot:spring-boot-starter-integration:1.2.0.RELEASE"
+
+    compile "io.projectreactor:reactor-net:2.0.0.RC1"
+}

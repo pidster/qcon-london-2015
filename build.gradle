@@ -1,0 +1,34 @@
+plugins {
+    id 'me.champeau.gradle.jmh' version '0.2.0'
+}
+
+apply plugin: 'eclipse'
+apply plugin: 'idea'
+
+idea {
+    project {
+        languageLevel = '1.8'
+        vcs = 'Git'
+    }
+}
+
+subprojects {
+
+    apply plugin: 'java'
+    apply plugin: 'jacoco'
+    apply plugin: 'me.champeau.gradle.jmh'
+
+
+    repositories {
+        jcenter()
+    }
+
+    dependencies {
+        compile 'org.slf4j:slf4j-api:1.7.7'
+        testCompile 'junit:junit:4.11'
+    }
+
+    jacocoTestReport.mustRunAfter test
+
+}
+
